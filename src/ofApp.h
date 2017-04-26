@@ -5,6 +5,9 @@
 
 class ofApp : public ofBaseApp{
 
+	ofxOpenVR openVR;
+
+
 	public:
 		void setup();
 		void update();
@@ -21,5 +24,8 @@ class ofApp : public ofBaseApp{
 		void windowResized(int w, int h);
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
+
+		void render(vr::Hmd_Eye nEye);
+		void controllerEvent(ofxOpenVRControllerEventArgs& args);
 		
 };
