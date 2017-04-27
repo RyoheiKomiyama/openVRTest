@@ -6,10 +6,17 @@
 class ofApp : public ofBaseApp{
 
 	ofxOpenVR openVR;
+	ofImage img;
+	ofBoxPrimitive box;
+	ofMatrix4x4 translateMatrix;
+	ofShader shader;
+	ofBoxPrimitive controllerBox;
+	ofShader controllersShader;
 
 
 	public:
 		void setup();
+		void exit();
 		void update();
 		void draw();
 
